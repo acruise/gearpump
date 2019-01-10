@@ -18,7 +18,6 @@ import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 import akka.actor._
 import akka.testkit.TestProbe
-import io.gearpump.cluster.appmaster.AppMasterRuntimeEnvironment
 import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 import io.gearpump.TestProbeUtil._
 import io.gearpump.cluster.AppMasterToMaster.RegisterAppMaster

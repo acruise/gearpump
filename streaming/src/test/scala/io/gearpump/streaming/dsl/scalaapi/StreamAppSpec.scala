@@ -23,10 +23,11 @@ import io.gearpump.streaming.partitioner.PartitionerDescription
 import io.gearpump.streaming.{ProcessorDescription, StreamApplication}
 import org.mockito.Mockito.when
 import org.scalatest._
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
+
 class StreamAppSpec extends FlatSpec with Matchers with BeforeAndAfterAll with MockitoSugar {
 
   implicit var system: ActorSystem = _

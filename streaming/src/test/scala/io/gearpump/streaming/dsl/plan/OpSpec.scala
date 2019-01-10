@@ -29,7 +29,7 @@ import io.gearpump.streaming.dsl.window.api.GlobalWindows
 import io.gearpump.streaming.dsl.window.impl.{StreamingOperator, WindowOperator}
 import io.gearpump.streaming.task.{Task, TaskContext}
 import org.mockito.Mockito._
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpec}
 
 import scala.concurrent.Await

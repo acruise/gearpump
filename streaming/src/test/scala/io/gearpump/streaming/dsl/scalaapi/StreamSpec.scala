@@ -31,7 +31,7 @@ import io.gearpump.streaming.{ProcessorDescription, StreamApplication}
 import io.gearpump.util.Graph._
 import org.mockito.Mockito.when
 import org.scalatest._
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration

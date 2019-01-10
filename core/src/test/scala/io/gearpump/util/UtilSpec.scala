@@ -15,7 +15,7 @@
 package io.gearpump.util
 
 import io.gearpump.transport.HostPort
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.{FlatSpec, Matchers}
 import Util._
 

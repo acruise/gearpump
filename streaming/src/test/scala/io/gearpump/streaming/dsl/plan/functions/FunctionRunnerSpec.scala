@@ -33,7 +33,7 @@ import io.gearpump.streaming.dsl.window.impl.{StreamingOperator, WindowOperator}
 import org.mockito.Matchers._
 import org.mockito.Mockito._
 import org.scalatest.{Matchers, WordSpec}
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 
 class FunctionRunnerSpec extends WordSpec with Matchers with MockitoSugar {
   import io.gearpump.streaming.dsl.plan.functions.FunctionRunnerSpec._

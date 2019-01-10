@@ -19,7 +19,7 @@ import io.gearpump.streaming.state.api.{Monoid, Serializer}
 import scala.util.Success
 import org.mockito.Mockito._
 import org.scalacheck.Gen
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.prop.PropertyChecks
 import org.scalatest.{Matchers, PropSpec}
 import io.gearpump.Time.MilliSeconds

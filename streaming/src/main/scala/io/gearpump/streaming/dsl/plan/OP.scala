@@ -14,20 +14,19 @@
 
 package io.gearpump.streaming.dsl.plan
 
+import scala.reflect.ClassTag
+
 import akka.actor.ActorSystem
 import io.gearpump.cluster.UserConfig
-import io.gearpump.streaming.dsl.scalaapi.Stream
 import io.gearpump.streaming.Processor.DefaultProcessor
 import io.gearpump.streaming.dsl.plan.functions.{AndThen, DummyRunner, FlatMapper, FunctionRunner}
-import io.gearpump.streaming.dsl.window.impl.{AndThenOperator, FlatMapOperator, StreamingOperator, WindowOperator}
-import io.gearpump.streaming.{Constants, Processor}
 import io.gearpump.streaming.dsl.task.{GroupByTask, TransformTask}
 import io.gearpump.streaming.dsl.window.api.{GlobalWindows, Windows}
+import io.gearpump.streaming.dsl.window.impl.{AndThenOperator, FlatMapOperator, StreamingOperator, WindowOperator}
 import io.gearpump.streaming.sink.{DataSink, DataSinkProcessor}
 import io.gearpump.streaming.source.{DataSource, DataSourceTask}
 import io.gearpump.streaming.task.Task
-
-import scala.reflect.ClassTag
+import io.gearpump.streaming.{Constants, Processor}
 
 object Op {
 

@@ -17,16 +17,14 @@ package io.gearpump.streaming.task
 import java.time.Instant
 import java.util.Random
 
-import io.gearpump.Time
+import io.gearpump.{Message, Time}
 import io.gearpump.cluster.UserConfig
 import io.gearpump.streaming.partitioner.{HashPartitioner, Partitioner}
 import io.gearpump.streaming.source.Watermark
-import io.gearpump.streaming.task.{Task, TaskContext}
-import io.gearpump.Message
-import io.gearpump.streaming.{LifeTime, ProcessorDescription}
 import io.gearpump.streaming.task.SubscriptionSpec.NextTask
+import io.gearpump.streaming.{LifeTime, ProcessorDescription}
 import org.mockito.Mockito._
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.{FlatSpec, Matchers}
 
 class SubscriptionSpec extends FlatSpec with Matchers with MockitoSugar {

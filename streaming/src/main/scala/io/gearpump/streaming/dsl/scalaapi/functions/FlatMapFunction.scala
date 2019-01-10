@@ -13,12 +13,10 @@
  */
 package io.gearpump.streaming.dsl.scalaapi.functions
 
+import scala.collection.JavaConverters._
+
 import io.gearpump.streaming.dsl.api.functions.{FilterFunction, MapFunction, SerializableFunction}
 import io.gearpump.streaming.dsl.javaapi.functions
-import io.gearpump.streaming.dsl.api.functions.{MapFunction, SerializableFunction}
-import io.gearpump.streaming.dsl.javaapi.functions.{FlatMapFunction => JFlatMapFunction}
-
-import scala.collection.JavaConverters._
 
 object FlatMapFunction {
 

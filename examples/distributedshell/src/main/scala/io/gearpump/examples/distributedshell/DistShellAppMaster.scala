@@ -62,7 +62,7 @@ class DistShellAppMaster(appContext: AppMasterContext, app: AppDescription)
       masterProxy ! ShutdownApplication(appId)
       context.stop(self)
     case msg: ShellCommand =>
-      Future.fold(context.children.map(_ ? msg))(new ShellCommandResultAggregator) {
+      Future.foldLeft(context.children.map(_ ? msg))(new ShellCommandResultAggregator) {
         (aggregator, response) => {
           aggregator.aggregate(response.asInstanceOf[ShellCommandResult])
         }

@@ -205,7 +205,7 @@ class AppMasterSpec extends WordSpec with Matchers with BeforeAndAfterEach with 
       appMaster.tell(AppMasterDataDetailRequest(appId), mockTask.ref)
       mockTask.expectMsgType[StreamAppMasterSummary](30.seconds)
       appMaster.tell(AppMasterDataDetailRequest(invalidAppId), mockTask.ref)
-      mockTask.expectNoMsg()
+      mockTask.expectNoMessage()
 
       for {
         i <- 0 to 1
@@ -238,7 +238,7 @@ class AppMasterSpec extends WordSpec with Matchers with BeforeAndAfterEach with 
         failure.error shouldBe cause
 
         appMaster.tell(GetLastFailure(invalidAppId), mockTask.ref)
-        mockTask.expectNoMsg()
+        mockTask.expectNoMessage()
       }
 
       // fail to recover after restarting a tasks for 5 times
@@ -257,7 +257,7 @@ class AppMasterSpec extends WordSpec with Matchers with BeforeAndAfterEach with 
       expectAppStarted()
 
       appMaster.tell(ReplayFromTimestampWindowTrailingEdge(invalidAppId), mockTask.ref)
-      mockMaster.expectNoMsg()
+      mockMaster.expectNoMessage()
     }
   }
 

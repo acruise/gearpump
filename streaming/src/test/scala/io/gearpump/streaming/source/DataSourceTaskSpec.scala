@@ -22,7 +22,7 @@ import io.gearpump.Message
 import io.gearpump.streaming.dsl.window.impl.{StreamingOperator, TimestampedValue, TriggeredOutputs}
 import org.mockito.Mockito._
 import org.scalacheck.Gen
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.{Matchers, PropSpec}
 import org.scalatest.prop.PropertyChecks
 

@@ -20,12 +20,12 @@ import com.esotericsoftware.kryo.{Kryo, Serializer => KryoSerializer}
 import com.typesafe.config.{ConfigFactory, ConfigValueFactory}
 import SerializerSpec._
 import io.gearpump.cluster.TestUtil
-import org.scalatest.mock.MockitoSugar
 import org.scalatest.{FlatSpec, Matchers}
-
 import scala.collection.JavaConverters._
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
+
+import org.scalatest.mockito.MockitoSugar
 
 
 class SerializerSpec extends FlatSpec with Matchers with MockitoSugar {

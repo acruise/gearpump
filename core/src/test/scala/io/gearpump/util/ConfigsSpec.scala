@@ -20,7 +20,7 @@ import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 import akka.actor.ActorSystem
 import io.gearpump.cluster.{ClusterConfig, ClusterConfigSource, UserConfig}
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.{FlatSpec, Matchers}
 
 class ConfigsSpec extends FlatSpec with Matchers with MockitoSugar {

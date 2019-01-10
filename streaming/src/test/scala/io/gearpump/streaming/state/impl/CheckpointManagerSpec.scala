@@ -18,7 +18,7 @@ import io.gearpump.streaming.transaction.api.CheckpointStore
 import org.mockito.Mockito._
 import org.mockito.{Matchers => MockitoMatchers}
 import org.scalacheck.Gen
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.prop.PropertyChecks
 import org.scalatest.{Matchers, PropSpec}
 import io.gearpump.Time.MilliSeconds

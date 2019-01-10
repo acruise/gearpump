@@ -16,11 +16,10 @@ package io.gearpump.streaming
 
 import akka.actor.ActorSystem
 import io.gearpump.cluster.{AppJar, Application, ApplicationMaster, UserConfig}
-import io.gearpump.util.{Graph, LogUtil, ReferenceEqual}
-import io.gearpump.streaming.ProcessorId
 import io.gearpump.streaming.appmaster.AppMaster
 import io.gearpump.streaming.partitioner.{HashPartitioner, Partitioner, PartitionerDescription, PartitionerObject}
 import io.gearpump.streaming.task.Task
+import io.gearpump.util.{Graph, LogUtil, ReferenceEqual}
 
 /**
  * Represent a streaming application

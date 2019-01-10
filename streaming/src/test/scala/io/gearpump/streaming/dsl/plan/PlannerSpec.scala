@@ -31,7 +31,7 @@ import io.gearpump.streaming.dsl.plan.functions.{FlatMapper, FoldRunner}
 import io.gearpump.streaming.dsl.window.api.GlobalWindows
 import io.gearpump.streaming.partitioner.{CoLocationPartitioner, GroupByPartitioner}
 import io.gearpump.streaming.task.{Task, TaskContext}
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 
 import scala.concurrent.Await

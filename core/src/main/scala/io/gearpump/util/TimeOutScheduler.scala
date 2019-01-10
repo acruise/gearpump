@@ -15,7 +15,9 @@
 package io.gearpump.util
 
 import java.util.concurrent.TimeUnit
+
 import scala.concurrent.duration._
+import scala.util.{Failure, Success}
 
 import akka.actor.{Actor, ActorRef}
 import akka.pattern.ask
@@ -28,12 +30,11 @@ trait TimeOutScheduler {
   def sendMsgWithTimeOutCallBack(
       target: ActorRef, msg: AnyRef, milliSeconds: Long, timeOutHandler: => Unit): Unit = {
     val result = target.ask(msg)(FiniteDuration(milliSeconds, TimeUnit.MILLISECONDS))
-    result onSuccess {
-      case msg =>
-        self ! msg
-    }
-    result onFailure {
-      case _ => timeOutHandler
+    result.onComplete {
+      case Success(smsg) =>
+        self ! smsg
+      case Failure(_) =>
+        timeOutHandler
     }
   }
 }

@@ -78,7 +78,7 @@ class MasterService(val master: ActorRef,
           val workers = workerList.workers
           val workerDataList = List.empty[WorkerSummary]
 
-          Future.fold(workers.map { workerId =>
+          Future.foldLeft(workers.map { workerId =>
             askWorker[WorkerData](master, workerId, GetWorkerData(workerId))
           })(workerDataList) { (workerDataList, workerData) =>
             workerDataList :+ workerData.workerDescription

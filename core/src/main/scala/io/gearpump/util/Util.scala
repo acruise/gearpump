@@ -16,10 +16,11 @@ package io.gearpump.util
 
 import java.io.{BufferedReader, File, FileInputStream, InputStreamReader}
 import java.net.{ServerSocket, URI}
+import java.util.concurrent.ThreadLocalRandom
 
-import scala.concurrent.forkjoin.ThreadLocalRandom
 import scala.sys.process.Process
 import scala.util.{Failure, Success, Try}
+
 import com.typesafe.config.{Config, ConfigFactory}
 import io.gearpump.transport.HostPort
 import io.gearpump.cluster.AppJar

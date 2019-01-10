@@ -16,13 +16,14 @@ package io.gearpump.util
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
+
 import akka.actor.{Actor, ActorSystem, Props}
 import akka.testkit.TestProbe
-import org.scalatest.mock.MockitoSugar
 import org.scalatest.{FlatSpec, Matchers}
 import ActorSystemBooter.{ActorCreated, RegisterActorSystem, _}
 import ActorSystemBooterSpec._
 import io.gearpump.cluster.TestUtil
+import org.scalatest.mockito.MockitoSugar
 
 class ActorSystemBooterSpec extends FlatSpec with Matchers with MockitoSugar {
 

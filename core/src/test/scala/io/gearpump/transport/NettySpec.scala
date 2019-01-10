@@ -18,15 +18,15 @@ import java.util.concurrent.TimeUnit
 
 import scala.concurrent.Await
 import scala.concurrent.duration._
+
 import akka.actor.{ActorRef, ActorSystem}
 import akka.testkit.TestProbe
-import org.scalatest.mock.MockitoSugar
-import org.scalatest.{FlatSpec, Matchers}
-import MockTransportSerializer.NettyMessage
 import io.gearpump.cluster.TestUtil
+import io.gearpump.transport.MockTransportSerializer.NettyMessage
 import io.gearpump.transport.netty.{Context, TaskMessage}
 import io.gearpump.util.Util
-import io.gearpump.transport.netty.Context
+import org.scalatest.mockito.MockitoSugar
+import org.scalatest.{FlatSpec, Matchers}
 
 class NettySpec extends FlatSpec with Matchers with MockitoSugar {
 

@@ -21,7 +21,7 @@ import io.gearpump.streaming.MockUtil
 import io.gearpump.Message
 import org.mockito.Mockito._
 import org.scalacheck.Gen
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.prop.PropertyChecks
 import org.scalatest.{Matchers, PropSpec}
 

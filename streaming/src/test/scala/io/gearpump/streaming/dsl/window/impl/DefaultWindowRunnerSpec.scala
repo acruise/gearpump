@@ -23,7 +23,7 @@ import io.gearpump.Message
 import io.gearpump.streaming.dsl.plan.functions.FoldRunner
 import io.gearpump.streaming.dsl.window.api.SessionWindows
 import org.scalatest.{Matchers, PropSpec}
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 import org.scalatest.prop.PropertyChecks
 
 class DefaultWindowRunnerSpec extends PropSpec with PropertyChecks
